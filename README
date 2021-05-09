@@ -1,0 +1,31 @@
+Desenvolvido por Thiago Gomes. 
+
+Este projeto conta com 3 páginas em HTML.
+
+O Objetivo deste projeto é estudar as funcionalidades da tag Canvas do HTML, desenvolvendo um jogo.
+
+A primeira e principal, esta localizada na raiz do projeto
+
+- index.html
+
+Neste arquivo temos a página home do projeto. sendo a partir dela, possivel navegar entre as demais páginas. 
+
+- src 
+
+Aqui temos toda a estrutura do projeto. 
+
+- src/animations 
+
+O arquivo _currentPage é responsável por atualizar o link do menu ativo, correspondente a página atual do usuário
+
+- src/images
+
+Responsável por centralizar todas as imagens utilizadas localmente neste projeto
+
+- src/pages
+
+Responsável por centralizar todas as páginas utilizadas neste projeto
+
+- src/styles
+
+Responsável por centralizar todas os estilos css utilizados neste projeto
