@@ -2,13 +2,22 @@
     align-items: center;
     justify-content: center;
     padding: 0px;
+    overflow: hidden;
 }
+
+@keyframes slide{
+    to{
+        transform: translateX(0);
+        opacity:1;
+    }
+}
+
 #card{
    width: 90%;
    height: 90%;
    border-radius: 12px;
    background-color: #1E2228;
-    padding: 0px;
+   padding: 0px;
    display: grid;
    grid-template-columns:5% 30% 60% 5%;
    grid-template-rows: 10% 70%  20%;
@@ -17,9 +26,12 @@
        "RR BB GG NN"
        "FD VC SD MM"
    ;
-   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) ;
-   opacity: 0.5;
+   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+   opacity: 0;
+   transform: translateX(-80px);
+   animation: slide .3s forwards;
 }
+
 
 #card:hover{
     width: 95%;
@@ -40,7 +52,7 @@
     background-clip: border-box;
     background-position: -450px -200px;
     
-    animation: ocilation 10s infinite;
+    animation: ocilation 4s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
 }
 
 @keyframes ocilation{

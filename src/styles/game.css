@@ -9,9 +9,7 @@
         "AA BB CC"
         "SR GM OP"
         "DD EE FF"
-        
     ;
-
 }
 
 #gameScore{
@@ -48,7 +46,6 @@
     overflow: scroll;
     opacity: 0.5;
     transition: all 0.15s ease-in;
-
 }
 
 #gameOptions:hover{
@@ -78,4 +75,16 @@
 #gameOptions:hover span{
     margin:10px 10px;
     font-size:17pt;
+}
+
+#gameCanvas{
+    grid-area: GM;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#canvas{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 133, 133);
 }
