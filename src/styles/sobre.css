@@ -1,0 +1,115 @@
+#menuContext{
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+#card{
+   width: 90%;
+   height: 90%;
+   border-radius: 12px;
+   background-color: #1E2228;
+    padding: 0px;
+   display: grid;
+   grid-template-columns:5% 30% 60% 5%;
+   grid-template-rows: 10% 70%  20%;
+   grid-template-areas:
+       "AA DS CC DD"
+       "RR BB GG NN"
+       "FD VC SD MM"
+   ;
+   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) ;
+   opacity: 0.5;
+}
+
+#card:hover{
+    width: 95%;
+    height: 95%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    opacity: 1;
+}
+
+
+#cardItemA{
+    grid-area: BB;
+    overflow: scroll;
+    border-radius: 12px;
+    padding: 0px;
+    background: url('../images/thiago.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-clip: border-box;
+    background-position: -450px -200px;
+    
+    animation: ocilation 10s infinite;
+}
+
+@keyframes ocilation{
+    0%{
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+    25%{
+        box-shadow: rgba(66, 3, 214, 0.3) 0px 0px 0px 3px;
+    }
+    50%{
+        box-shadow: rgba(154, 3, 214, 0.3) 0px 0px 0px 3px;
+    }
+    75%{
+        box-shadow: rgba(214, 3, 196, 0.3) 0px 0px 0px 3px;
+    }
+    100%{
+        box-shadow: rgba(11, 219, 209, 0.3) 0px 0px 0px 3px;
+    }
+}
+
+#cardItemB{
+    grid-area: GG;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+#cardItemB h1{
+    font-size: 26pt;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+#cardItemB span{
+    font-size: 16pt;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #FF436D;
+    letter-spacing: 0.12rem;
+}
+
+
+#cardItemB p{
+    font-size: 14pt;
+    font-weight: 300;
+    color: #bebebe;
+    margin-top: 50px;
+    letter-spacing: 0.1rem;
+}
+
+#cardItemC{
+    grid-area: VC;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    overflow: scroll;
+
+}
+
+
+#cardItemC h6{
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #999999;
+    margin-top: 10px;
+    letter-spacing: 0.1rem;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) ;
+}
+

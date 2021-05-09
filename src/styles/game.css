@@ -66,9 +66,9 @@
     font-size: 16pt;
     font-weight: 400;
     color: #bebebe;
-    margin: 10px 20px;
+    margin: 5px 20px;
     letter-spacing: 0.1rem;
-    transition: all 0.15s ease-in;
+    transition: all 0.30s ease-in;
 }
 
 #gameOptions:hover img{
@@ -76,5 +76,6 @@
 }
 
 #gameOptions:hover span{
-    font-size: 18pt;
+    margin:10px 10px;
+    font-size:17pt;
 }

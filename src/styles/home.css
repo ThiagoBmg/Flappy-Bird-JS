@@ -7,6 +7,7 @@
 *::-webkit-scrollbar
 {
 	width: 0px;
+
 }
 
 #home{
@@ -45,7 +46,7 @@
 }
 
 #menuSideA span{
-    color: #979797;
+    color: rgb(151, 151, 151);
     font-size: 12pt;
 }
 
@@ -88,7 +89,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 
 

@@ -162,7 +162,7 @@
 #subCard:hover p{
     font-size: 13.5pt;
     font-weight: 500;
-    color: #1E2228;
+    color: #FF436D;
     width: 85%;
     letter-spacing: 0.1rem;
 }
@@ -170,4 +170,9 @@
 #subCard span{
     color: #FF436D;
     font-weight: bold;
+}
+
+
+#subCard:hover span{
+    color: #1E2228;
 }
