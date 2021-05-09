@@ -1,0 +1,173 @@
+#carrocel{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#card{
+    width: 40%;
+    height: 90%;
+    background-color: #1E2228;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 50px;
+    border-radius: 12px;
+    overflow-y: scroll;
+    transition: all 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) ;
+
+}
+
+#card:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color: #1C323F;
+}
+
+#card h1{
+    font-size: 26pt;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+
+#card p{
+    font-size: 14pt;
+    font-weight: 300;
+    color: #bebebe;
+    margin-top: 20px;
+    letter-spacing: 0.1rem;
+}
+
+#jogoButton{
+    width: 150px;
+    height: 50px;
+    position: relative;
+    align-self: flex-end;
+    justify-self: flex-end;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+    transition: all 0.15s ease-in-out;
+    margin-top: 50px;
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+  
+    font-size: 12pt;
+    font-weight: bold;
+    color: #1C323F;
+}
+
+#jogoButton:hover{
+    color: #ffffff;
+
+    background-color: #FF436D;
+}
+
+#jogoButton:active{
+    color: #1C323F;
+    background-color: #0EC9B9;
+}
+
+#contextB{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+  /*   background-color: #FF436D; */
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+
+}
+
+#subCard:nth-child(1):hover{
+    background-color: #11706b;
+}
+#subCard:nth-child(2):hover{
+    background-color: #11706b;
+}
+#subCard:nth-child(3):hover{
+    background-color: #11706b;
+}
+
+#subCard{
+     width: 300px;
+    height: 70%;
+    background-color: #1E2228;
+    margin: 0px 50px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) ;
+    align-items: center;
+    overflow: scroll;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#subCard:hover{
+    width: 350px;
+    height: 80%;
+    transform: translateY(-20px);
+    font-size: 50px;
+    opacity: 1;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+
+#subCard img{
+    max-width: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    transition: all 0.5s ease;
+}
+
+
+#subCard:hover img{
+    max-width: 100px;
+    margin-top: 20px;
+    width: 25%;
+    transition: all 0.5s ease;
+}
+
+#subCard h3{
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    margin:5px 0px;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+}
+
+#subCard:hover h3{
+    font-size: 13pt;
+}
+
+#subCard p{
+    font-size: 12pt;
+    font-weight: 400;
+    width: 80%;
+    color: #bebebe;
+    margin: 10px 20px;
+    letter-spacing: 0.1rem;
+    transition: all 0.1s ease-in;
+}
+
+#subCard:hover p{
+    font-size: 13.5pt;
+    font-weight: 500;
+    color: #1E2228;
+    width: 85%;
+    letter-spacing: 0.1rem;
+}
+
+#subCard span{
+    color: #FF436D;
+    font-weight: bold;
+}

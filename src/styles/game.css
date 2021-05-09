@@ -1,0 +1,80 @@
+#gameContext{
+    width: 100%;
+    height: calc(100% - 70px);
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 60%  20%;
+    grid-template-areas:
+        "AA BB CC"
+        "SR GM OP"
+        "DD EE FF"
+        
+    ;
+
+}
+
+#gameScore{
+    grid-area: SR;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+#gameScore h1{
+   color: rgb(170, 170, 170);
+   font-weight: 400;
+   font-size: 18pt;
+   margin-top: 20px;
+}
+
+#gameScore span{
+    font-size: 30pt;
+    font-weight: 700;
+    color: #bebebe;
+    margin: 50px 20px;
+    letter-spacing: 0.1rem;
+    transition: all 0.15s ease-in;
+}
+
+#gameOptions{
+    grid-area: OP;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    opacity: 0.5;
+    transition: all 0.15s ease-in;
+
+}
+
+#gameOptions:hover{
+    opacity: 1;
+}
+
+
+#gameOptions img{
+    width: 35%;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+#gameOptions span{
+    font-size: 16pt;
+    font-weight: 400;
+    color: #bebebe;
+    margin: 10px 20px;
+    letter-spacing: 0.1rem;
+    transition: all 0.15s ease-in;
+}
+
+#gameOptions:hover img{
+    width: 40%;
+}
+
+#gameOptions:hover span{
+    font-size: 18pt;
+}

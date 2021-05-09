@@ -1,0 +1,94 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box; 
+}
+
+*::-webkit-scrollbar
+{
+	width: 0px;
+}
+
+#home{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2D333B;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+#menu{
+    width: 100%;
+    height:70px;
+    background-color: #1E2228;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+
+#menuSideA , #menuSideB{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+#menuSideA{
+    flex-direction: column;
+    justify-content: space-between;
+    padding:10px 50px;
+}
+
+#menuSideA h1{
+    color: white;
+    font-size: 16pt;
+}
+
+#menuSideA span{
+    color: #979797;
+    font-size: 12pt;
+}
+
+#menuSideB ul{
+    list-style: none;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+#menuSideB ul li{
+    transition: all 0.15s  ease-in-out;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+#menuSideB ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #979797;
+}
+
+#menuSideB ul li a:hover{
+    color: #ffffff;
+ 
+}
+
+#menuSideB ul li a:active{
+    color: #FF436D;
+}
+
+#menuContext{
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
