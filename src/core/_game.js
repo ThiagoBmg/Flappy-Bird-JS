@@ -21,7 +21,7 @@ var properties = {
         canvas.style.opacity = '1'
         canvas.style.width= '100%'
         canvas.style.width='100%'
-        canvas.style.backgroundColor =  '#e7e7e7';
+        canvas.style.backgroundColor =  '#E6EDF2';
 
         this.game_status = 1; // definindo status do jogo como iniciado
         // redefinindo paremetros do personagem 
@@ -30,22 +30,25 @@ var properties = {
         block.draw(); // desenhando o personagem na tela
 
         setTimeout(()=>{
-            window.addEventListener('keydown', (event)=>{// adicionando listner para quando uma tecla for pressionada
-                var key_press = event.code; // guardando o nome da tecla pressionada 
-                // [aproveitando as dadivas que o js nos oferece com o exemplo de if abaixo rsrsr] 
-                if(key_press == 'ArrowDown' || key_press == 'KeyS') block.y+=block.velocity; // ação para baixo
-                if(key_press == 'KeyW' || key_press == 'ArrowUp'|| key_press == 'Space') block.y-=block.velocity; // ação para cima
-                update(); // atualizando o canvas
-            });
-
             if (!this.gravity_status){
-                this.gravity_status=1;
+                window.addEventListener('keydown', (event)=>{// adicionando listner para quando uma tecla for pressionada
+                    var key_press = event.code; // guardando o nome da tecla pressionada 
+                    // [aproveitando as dadivas que o js nos oferece com o exemplo de if abaixo rsrsr] 
+                    if(key_press == 'ArrowDown' || key_press == 'KeyS') block.y+=block.velocity; // ação para baixo
+                    if(key_press == 'KeyW' || key_press == 'ArrowUp'|| key_press == 'Space') block.y-=block.velocity; // ação para cima
+                    update(); // atualizando o canvas
+                });
+
+                
                 setInterval(()=>{ // função que aplica a gravidade sobre o usuário fazendo o seu eixo y ser ajudato a partir da variavel this.gravity  
                     if (!this.game_status) return false; // valida se o jogo esta iniciado, caso não esteja retorna false 
                     block.y++ // fazendo o personagem descer
                     update(); // atualizando canvas
                 },properties.gravity);
-            }    
+
+                this.gravity_status=1; // defini o status como verdadeiro para não executar esta função das proximas vezes que o usuário jogar 
+                
+            }   
         },2000)
     },
     validations:()=>{ // midleware que verifica se o personagem esta nos limites propostos para o cenário do jogo, caso o contrário finaliza a partida :(
