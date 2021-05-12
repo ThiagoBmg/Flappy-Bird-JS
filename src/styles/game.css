@@ -81,10 +81,23 @@
     grid-area: GM;
     border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #canvas{
+    width: 90%;
+    height: 90%;
+    background-color: #1E2228;
+    transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    opacity: 0.8;
+    border-radius: 12px;
+}
+
+/* #canvas:hover{
     width: 100%;
     height: 100%;
-    background-color: #1E2228;
-}
+    background-color: #e7e7e7;
+    transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+} */

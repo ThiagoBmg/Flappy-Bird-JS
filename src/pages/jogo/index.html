@@ -38,10 +38,17 @@
                 <span>0</span>
             </div>
 
-            <div id="gameOptions">
+            <div id="gameOptions" onclick="document.location.reload(true)">
                 <img id="imgTest" src="../../images/icons8_restart_200px.png" alt="">
                 <span>RESTART</span>
             </div>
+
+            <!-- 
+                DEFININDO IMAGENS DOS PASSAROS MAS NO BODY ELE FICARA COMO DISPLAY 0    
+            -->
+            <img id="birdRed" style="display: none; "  src="../../images/bird-red.png" alt="">
+            <img id="birdYellow" style="display: none; "  src="../../images/bird-yellow.png" alt="">
+
 
             <div id="gameCanvas">
                 <canvas id="canvas">
@@ -49,12 +56,8 @@
                 </canvas>
             </div>
         </div>
-
-        
-
-        
     </section>
-    <script src="../../animations/_currentPage.js"></script>
+    <script src="../../animations/_currentPage.js"></script> 
     <script src="../../core/_objects.js"></script>
     <script src="../../core/_game.js"></script>
 </body>
