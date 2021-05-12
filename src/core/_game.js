@@ -1,9 +1,9 @@
 
 // Função que atualiza o canvas e todos os objetos.
-function update(){
+function update(x){
     if(properties.validations()){
         ctx.clearRect(0,0,canvasWidth, canvasHeight);
-        block.draw();
+        block.draw(x);
     }
 }
 
@@ -20,14 +20,14 @@ var properties = {
         // definindo estilo do canvas para o jogo ativado
         canvas.style.opacity = '1'
         canvas.style.width= '100%'
-        canvas.style.width='100%'
+        canvas.style.height='100%'
         canvas.style.backgroundColor =  '#E6EDF2';
 
         this.game_status = 1; // definindo status do jogo como iniciado
         // redefinindo paremetros do personagem 
         block.x= default_value.x;
         block.y= default_value.y;
-        block.draw(); // desenhando o personagem na tela
+        block.draw(2); // desenhando o personagem na tela
 
         setTimeout(()=>{
             if (!this.gravity_status){
@@ -35,19 +35,22 @@ var properties = {
                     var key_press = event.code; // guardando o nome da tecla pressionada 
                     // [aproveitando as dadivas que o js nos oferece com o exemplo de if abaixo rsrsr] 
                     if(key_press == 'ArrowDown' || key_press == 'KeyS') block.y+=block.velocity; // ação para baixo
-                    if(key_press == 'KeyW' || key_press == 'ArrowUp'|| key_press == 'Space') block.y-=block.velocity; // ação para cima
-                    update(); // atualizando o canvas
+                    if(key_press == 'KeyW' || key_press == 'ArrowUp'|| key_press == 'Space') {
+                        block.y-=block.velocity;
+                        block.angle = 30
+                    } // ação para cima
+                    update(3); // atualizando o canvas
                 });
 
                 
                 setInterval(()=>{ // função que aplica a gravidade sobre o usuário fazendo o seu eixo y ser ajudato a partir da variavel this.gravity  
                     if (!this.game_status) return false; // valida se o jogo esta iniciado, caso não esteja retorna false 
                     block.y++ // fazendo o personagem descer
-                    update(); // atualizando canvas
+                    update(1); // atualizando canvas
                 },properties.gravity);
 
                 this.gravity_status=1; // defini o status como verdadeiro para não executar esta função das proximas vezes que o usuário jogar 
-                
+
             }   
         },2000)
     },
@@ -63,7 +66,7 @@ var properties = {
             // definindo estilo do canvas para o jogo desativado
             canvas.style.opacity = '0.8'
             canvas.style.width= '90%'
-            canvas.style.width='90%'
+            canvas.style.height='90%'
             canvas.style.backgroundColor = '#1E2228';
             window.removeEventListener('keydown', (event)=>{ 
                 /* retirando o listner por conta de finalizar o game  */
