@@ -17,7 +17,7 @@
     <section id="home">
         <nav id="menu">
             <div id="menuSideA">
-                <h1>Nome do Jogo</h1>
+                <h1>FLAP-FEI</h1>
                 <span>Desenvolvido por Thiago Gomes</span>
             </div>
 
@@ -38,9 +38,20 @@
                 <span  id="bestScore">0</span>
             </div>
 
-<!--             <div id="gameOptions" onclick="document.location.reload(true)">
- -->         
-            <div id="gameOptions" onclick="properties.game_init()">
+            <div id="gameTitle">
+                <div id="gameTitleB"> <button onclick="properties.game_init()">JOGAR</button> </div>
+                <div id="gameTitleA">
+                    <h4>Instruções</h4>
+                    <ul>
+                        <li>Utilize as teclas W ou ↕ para se movimentar.</li>
+                        <li>Clique em Jogar, para começar sua experiência.</li>
+                        <li>Ao clicar em restart sua página será recarregada.</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div id="gameOptions" onclick="document.location.reload(true)">
                 <img id="imgTest" src="../../images/icons8_restart_200px.png" alt="">
                 <span>RESTART</span>
             </div>

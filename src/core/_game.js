@@ -7,8 +7,6 @@ function update(x){
         for(let s of obstacles){
             s.draw()
         }
-        console.log(obstacles.length)
-        console.log(properties.game_status)
     }
 }
 
@@ -52,7 +50,7 @@ var properties = {
         },properties.delay)
     },
     validations:()=>{ // midleware que verifica se o personagem esta nos limites propostos para o cenário do jogo, caso o contrário finaliza a partida :(
-       
+
         const kill_game = () =>{ // criando função que ira matar o jogo caso o usuário seja um noob
             //alert('jogo interrompido')
             // iniciando obstaculos
@@ -78,13 +76,20 @@ var properties = {
             properties.game_status=0; // definindo o status do jogo como parado
             properties.gravity_status=0; // desativando a gravidade em cima do
         }
-
+        for(let v of obstacles){
+            var a = block.x - v.x;
+            var b = block.y - v.y;
+            var c = Math.sqrt(a*a+b*b)
+            if(c<25){
+                kill_game();
+            }
+        }
         if(block.y>=canvasHeight-block.h||block.y<=0){
             kill_game();
             return false
-        }
-        else{
+        }else{
             return true
         }
+
     }
 };

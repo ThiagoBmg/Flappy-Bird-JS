@@ -101,3 +101,91 @@
     background-color: #e7e7e7;
     transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 } */
+
+#gameTitle{
+    grid-area: BB;
+  
+    display: flex;
+    flex-direction: row;
+
+}
+
+#gameTitleA{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0.5;
+}
+
+
+#gameTitleA:hover{
+    opacity: 1;
+    transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#gameTitleA h4{
+    font-size: 24pt;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.1rem;
+}
+#gameTitleA ul{
+    margin-top: 15px;
+    list-style: none;
+}
+#gameTitleA li{
+    margin-top: 10px;
+    font-size: 11pt;
+    font-weight: 300;
+    font-style: italic;
+    color: #bebebe;
+    letter-spacing: 0.1rem;
+}
+
+#gameTitleB{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameTitleB button{
+    width: 30%;
+    height: 50%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+    transition: all 0.15s ease-in-out;
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.1rem;
+    background-color: #1E2228;
+    font-size: 12pt;
+    font-weight: bold;
+    color:  #2D333B;
+    animation: gmButton 10s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes gmButton {
+        to{
+            color:  #0EC9B9;
+        }
+}
+
+#gameTitleB button:hover{
+    color: #ffffff;
+    width: 35%;
+    height: 55%;
+    font-size: 13pt;
+    background-color: #16557a;
+}
+
+#gameTitleB button:active{
+    color: #ffffff;
+    background-color: #1C323F;
+}

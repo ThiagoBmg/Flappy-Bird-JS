@@ -38,7 +38,7 @@ class obstacle {
     
     draw(){
         ctx.fillStyle = this.color;
-        ctx.fillRect(this.x,this.y,this.w,this.h);
+        ctx.drawImage(img,this.x,this.y,this.w,this.h);
         if(!this.set) {
             update();
             this.set=1; // caso 
