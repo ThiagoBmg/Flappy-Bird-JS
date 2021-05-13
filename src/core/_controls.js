@@ -1,3 +1,6 @@
+// Desenvolvido por Thiago Gomes
+// Ciência da Computação
+
 window.addEventListener('keydown', (event)=>{// adicionando listner para quando uma tecla for pressionada
     var key_press = event.code; // guardando o nome da tecla pressionada 
     // [aproveitando as dadivas que o js nos oferece com o exemplo de if abaixo rsrsr] 

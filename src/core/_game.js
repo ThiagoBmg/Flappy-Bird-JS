@@ -1,3 +1,5 @@
+// Desenvolvido por Thiago Gomes
+// Ciência da Computação
 
 // Função que atualiza o canvas e todos os objetos.
 function update(x){

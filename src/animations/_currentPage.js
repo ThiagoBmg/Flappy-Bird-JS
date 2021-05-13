@@ -1,3 +1,6 @@
+// Desenvolvido por Thiago Gomes
+// Ciência da Computação
+
 // função que ativa o link no menu de acondo com a pagina do usuário
 (function(){
     
