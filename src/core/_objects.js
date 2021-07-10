@@ -1,6 +1,4 @@
 // Desenvolvido por Thiago Gomes
-// Ciência da Computação
-
 // pegando os elementos e armazenando em constantes para utilizarmos na criação do projeto
 //
 const canvas = document.querySelector('#canvas');
