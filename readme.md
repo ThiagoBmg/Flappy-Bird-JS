@@ -1,4 +1,4 @@
-# Desenvolvido por Thiago Gomes. 
+# Flappy Bird 
 
 Este projeto conta com 3 páginas em HTML.
 
